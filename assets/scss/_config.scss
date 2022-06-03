@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$dark-color: #272727;
+$dark-color-opacity70: rgba(39, 39, 39, 0.7);
+$dark-color-opacity90: rgba(39, 39, 39, 0.9);
+
+$light-color: #EDE9EC;
+$viridian-green: #109193;
+$marigold: #ED9F31;
+$mulberry: #BE4B88;
+
+@keyframes menu-hover {
+    0% { background-color: $viridian-green; }
+    50% { background-color: $mulberry; }
+    100% { background-color: $marigold; }
+}

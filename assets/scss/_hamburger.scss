@@ -1,0 +1,66 @@
+/* 35px*35px click area */
+#hamburger {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    appearance: none;
+}
+
+/* hamburger logo */
+@mixin hamburger-line {
+    position: absolute;
+    background-color: $light-color;
+    width: 30px;
+    height: 3px;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+#hamburger + label {
+    @include hamburger-line;
+    top: 33.5px; right: 10px;
+    transition: width 0.6s ease;
+
+    &::before {
+        @include hamburger-line;
+        content: "";
+        right: 0; top: -13.5px;
+        transition: all 0.4s ease;
+        transform-origin: right;
+    } 
+    
+    &::after {
+        @include hamburger-line;
+        content: "";
+        right: 0; top: 13.5px;
+        transition: all 0.4s ease;
+        transform-origin: right;
+    }
+}
+
+/* hamburger becomes a cross when it's clicked */
+#hamburger:checked ~ label {
+    width: 0;
+    transition: width 0.4s ease;
+
+    &::before {
+        right: 0px;
+        transform: rotate(-45deg);
+        transition: all 0.6s ease;
+        transform-origin: right;
+        width: 39px;
+    }
+
+    &::after {
+        right: 0px;
+        transform: rotate(45deg);
+        transition: all 0.6s ease;
+        transform-origin: right;
+        width: 39px;
+    }
+}
+
+#hamburger:checked ~ .dropdown-menu {
+    display: block;
+}
