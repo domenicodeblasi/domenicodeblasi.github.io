@@ -4,7 +4,15 @@
   box-sizing: border-box;
 }
 
-@keyframes menu-hover {
+/* VARIABLES */
+/* FONTS */
+@font-face {
+  font-family: "Shrimp";
+  src: url("../fonts/shrimp.ttf");
+}
+
+/* KEYFRAMES */
+@keyframes menu-features-hover {
   0% {
     background-color: #109193;
   }
@@ -13,6 +21,15 @@
   }
   100% {
     background-color: #ED9F31;
+  }
+}
+
+@keyframes menu-height-animation {
+  from {
+    height: 20vh;
+  }
+  to {
+    height: 100vh;
   }
 }
 
@@ -88,13 +105,10 @@
   width: 39px;
 }
 
-#hamburger:checked ~ .dropdown-menu {
-  display: block;
+body {
+  background-color: #272727;
 }
 
-/*body {
-    background-color: $dark-color;
-}*/
 .menu-container {
   position: fixed;
   background-color: rgba(39, 39, 39, 0.7);
@@ -114,6 +128,16 @@
 .hamburger-container {
   width: 30px;
   height: 30px;
+}
+
+/* when we click the hamburger logo */
+#hamburger:checked ~ .dropdown-menu {
+  display: block;
+  animation: menu-height-animation 0.5s ease;
+}
+
+#hamburger:checked ~ .dropdown-menu .menu-features {
+  animation: menu-height-animation 0.7s ease;
 }
 
 .dropdown-menu {
@@ -144,7 +168,6 @@
 
 .menu-features li {
   list-style-type: none;
-  margin: 0 35px;
 }
 
 .menu-features li:nth-child(2), .menu-features li:nth-child(3), .menu-features li:nth-child(4) {
@@ -152,16 +175,35 @@
 }
 
 .menu-features li:hover {
-  animation: menu-hover 0.4s ease-in-out 0.1s infinite;
-  transform: scale(113%);
+  animation: menu-features-hover 0.4s ease 0s infinite;
+  transform: scaleY(105%);
   transition: transform 0.4s ease 0s;
 }
 
+.menu-features li:hover a {
+  margin-left: 5px;
+  transition: margin-left 0.2s ease;
+}
+
 .menu-features li a {
+  margin-left: 35px;
   text-decoration: none;
   color: #EDE9EC;
-  /*&:hover {
-                animation: menu-hover 0.3s ease 0s 2;
-                transform: scale(110%);
-            }*/
+}
+
+/* =======================================================
+DESKTOP STYLES
+======================================================= */
+@media only screen and (min-width: 1000px) {
+  .menu-container {
+    background-color: rgba(39, 39, 39, 0);
+  }
+  #hamburger:checked ~ .dropdown-menu {
+    top: 0;
+    z-index: -1;
+  }
+  #hamburger:checked ~ .dropdown-menu .menu-features {
+    margin-top: 170px;
+    animation: menu-height-animation 0.94s ease;
+  }
 }
