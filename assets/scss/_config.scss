@@ -7,8 +7,8 @@
 /* VARIABLES */
 
 $dark-color: #272727;
-$dark-color-opacity70: rgba(39, 39, 39, 0.7);
-$dark-color-opacity90: rgba(39, 39, 39, 0.9);
+$dark-color-opacity70: rgba(39, 39, 39, 0.85);
+$dark-color-opacity90: rgba(39, 39, 39, 0.95);
 
 $light-color: #EDE9EC;
 $viridian-green: #109193;
@@ -28,9 +28,4 @@ $mulberry: #BE4B88;
     0% { background-color: $viridian-green; }
     50% { background-color: $mulberry; }
     100% { background-color: $marigold; }
-}
-
-@keyframes menu-height-animation {
-    from { height: 20vh; }
-    to { height: 100vh; }
 }
