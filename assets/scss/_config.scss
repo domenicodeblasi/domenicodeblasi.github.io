@@ -4,26 +4,16 @@
     box-sizing: border-box;
 }
 
+
 /* VARIABLES */
-
 $dark-color: #272727;
-$dark-color-opacity70: rgba(39, 39, 39, 0.85);
-$dark-color-opacity90: rgba(39, 39, 39, 0.95);
-
 $light-color: #EDE9EC;
 $viridian-green: #109193;
 $marigold: #ED9F31;
 $mulberry: #BE4B88;
 
-/* FONTS */
-
-@font-face {
-    font-family: "Shrimp";
-    src: url("../fonts/shrimp.ttf");
-}
 
 /* KEYFRAMES */
-
 @keyframes menu-features-hover {
     0% { background-color: $viridian-green; }
     50% { background-color: $mulberry; }

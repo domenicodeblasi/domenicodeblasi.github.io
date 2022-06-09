@@ -5,12 +5,6 @@
 }
 
 /* VARIABLES */
-/* FONTS */
-@font-face {
-  font-family: "Shrimp";
-  src: url("../fonts/shrimp.ttf");
-}
-
 /* KEYFRAMES */
 @keyframes menu-features-hover {
   0% {
@@ -43,7 +37,7 @@
   cursor: pointer;
   top: 33.5px;
   right: 10px;
-  transition: width 0.6s ease;
+  transition: width 0.3s ease;
 }
 
 #hamburger + label::before {
@@ -56,7 +50,7 @@
   content: "";
   right: 0;
   top: -13.5px;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
   transform-origin: right;
 }
 
@@ -70,20 +64,20 @@
   content: "";
   right: 0;
   top: 13.5px;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
   transform-origin: right;
 }
 
 /* hamburger becomes a cross when it's clicked */
 #hamburger:checked ~ label {
   width: 0;
-  transition: width 0.4s ease;
+  transition: width 0.2s ease;
 }
 
 #hamburger:checked ~ label::before {
   right: 0px;
   transform: rotate(-45deg);
-  transition: all 0.6s ease;
+  transition: all 0.3s ease;
   transform-origin: right;
   width: 39px;
 }
@@ -91,7 +85,7 @@
 #hamburger:checked ~ label::after {
   right: 0px;
   transform: rotate(45deg);
-  transition: all 0.6s ease;
+  transition: all 0.3s ease;
   transform-origin: right;
   width: 39px;
 }
@@ -101,15 +95,31 @@ body {
   height: 4000px;
 }
 
+h1, h2 {
+  font-family: 'Big Shoulders Text', cursive;
+  font-weight: 200;
+  color: #EDE9EC;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
 p {
   color: #EDE9EC;
 }
 
 .menu-container {
   position: fixed;
-  background-color: rgba(39, 39, 39, 0.85);
+  top: 0;
+  background-color: rgba(39, 39, 39, 0.95);
   width: 100%;
   height: 70px;
+  z-index: 5;
 }
 
 .menu {
@@ -142,7 +152,7 @@ p {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-color: rgba(31, 31, 31, 0.95);
+  background-color: #1a1a1a;
 }
 
 .dropdown-menu nav {
@@ -172,6 +182,59 @@ p {
   color: #EDE9EC;
 }
 
+article {
+  width: 100%;
+  height: 100%;
+}
+
+#hero {
+  width: 100%;
+  height: 200vh;
+}
+
+.title-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #272727;
+  box-shadow: 0 10px #1f1f1f;
+  border-bottom: 3px solid #1a1a1a;
+}
+
+.main-title {
+  width: 80%;
+}
+
+.main-title h1, .main-title h2 {
+  margin-left: 30px;
+  letter-spacing: 2px;
+}
+
+.brick-wall {
+  background-image: url("../images/wall.svg");
+  background-size: 150px;
+  background-position: 7px 15px;
+}
+
+.image-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustration {
+  width: 50%;
+  display: block;
+}
+
+.illustration img {
+  width: 100%;
+}
+
 /* =======================================================
 DESKTOP STYLES
 ======================================================= */
@@ -188,14 +251,34 @@ DESKTOP STYLES
     margin-left: 5px;
     transition: margin-left 0.2s ease;
   }
+  #hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+  }
+  .title-container {
+    width: 60%;
+    border-bottom: none;
+    border-right: 3px solid #1a1a1a;
+    box-shadow: 7px 0 #1f1f1f;
+  }
+  .image-container {
+    width: 40%;
+  }
+  .illustration {
+    width: 70%;
+  }
 }
 
 /* =======================================================
 FOR SCREEN HEIGHT < 450px
 ======================================================= */
-@media only screen and (max-height: 450px) {
+@media only screen and (max-height: 500px) {
   .dropdown-menu {
     font-weight: 100;
     font-size: 25px;
+  }
+  .illustration {
+    width: 25%;
   }
 }

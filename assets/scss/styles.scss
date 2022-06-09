@@ -6,15 +6,31 @@ body {
     height: 4000px;
 }
 
+h1, h2 {
+    font-family: 'Big Shoulders Text', cursive;
+    font-weight: 200;
+    color: $light-color;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
 p {
     color: $light-color;
 }
 
 .menu-container {
     position: fixed;
-    background-color: $dark-color-opacity70;
+    top: 0;
+    background-color: rgba($dark-color, 0.95);
     width: 100%;
     height: 70px;
+    z-index: 5;
 }
 
 .menu {
@@ -46,7 +62,7 @@ p {
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-color: darken($dark-color-opacity90, 3%);
+    background-color: darken($dark-color, 5%);
 
     nav {
         display: flex;
@@ -76,6 +92,62 @@ p {
     }
 }
 
+
+article {
+    width: 100%;
+    height: 100%;
+}
+
+#hero {
+    width: 100%;
+    height: 200vh;
+}
+
+.title-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: $dark-color;
+    box-shadow: 0 10px darken($dark-color, 3%);
+    border-bottom: 3px solid darken($dark-color, 5%);
+}
+
+.main-title {
+    width: 80%;
+
+    h1, h2 {
+        margin-left: 30px;
+        letter-spacing: 2px;
+    }
+}
+
+.brick-wall {
+    background-image: url("../images/wall.svg");
+    background-size: 150px;
+    background-position: 7px 15px;
+}
+
+.image-container {
+    display: flex;
+    
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.illustration {
+    width: 50%;
+    display: block;
+
+    img {
+        width: 100%;
+    }
+}
+
+
 /* =======================================================
 DESKTOP STYLES
 ======================================================= */
@@ -83,7 +155,7 @@ DESKTOP STYLES
 @media only screen and (min-width: 1000px) {
 
     .menu-container {
-        background-color: rgba($dark-color-opacity70, 0);
+        background-color: rgba($dark-color, 0);
     }
 
     .menu-features {
@@ -99,16 +171,41 @@ DESKTOP STYLES
             }
         }
     }
+
+    #hero {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+    }
+
+    .title-container {
+        width: 60%;
+        border-bottom: none;
+        border-right: 3px solid darken($dark-color, 5%);
+        box-shadow: 7px 0 darken($dark-color, 3%);
+    }
+
+    .image-container {
+        width: 40%;
+    }
+
+    .illustration {
+        width: 70%;
+    }
+
 }
 
 /* =======================================================
 FOR SCREEN HEIGHT < 450px
 ======================================================= */
-@media only screen and (max-height: 450px) {
+@media only screen and (max-height: 500px) {
 
     .dropdown-menu {
         font-weight: 100;
         font-size: 25px;
     }
 
+    .illustration {
+        width: 25%;
+    }
 }
