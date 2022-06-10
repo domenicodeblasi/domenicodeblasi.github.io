@@ -193,6 +193,7 @@ article {
 }
 
 .title-container {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -212,6 +213,21 @@ article {
   letter-spacing: 2px;
 }
 
+.links {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  width: 25%;
+  max-width: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.links a {
+  width: 40%;
+}
+
 .brick-wall {
   background-image: url("../images/wall.svg");
   background-size: 150px;
@@ -227,7 +243,7 @@ article {
 }
 
 .illustration {
-  width: 50%;
+  width: 75%;
   display: block;
 }
 
@@ -236,9 +252,18 @@ article {
 }
 
 /* =======================================================
+TABLET STYLES
+======================================================= */
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
+  .illustration {
+    width: 48%;
+  }
+}
+
+/* =======================================================
 DESKTOP STYLES
 ======================================================= */
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1008px) {
   .menu-container {
     background-color: rgba(39, 39, 39, 0);
   }
@@ -277,6 +302,9 @@ FOR SCREEN HEIGHT < 450px
   .dropdown-menu {
     font-weight: 100;
     font-size: 25px;
+  }
+  .links {
+    max-width: 70px;
   }
   .illustration {
     width: 25%;
