@@ -93,24 +93,27 @@
 body {
   background-color: #272727;
   height: 4000px;
+  font-family: 'Tajawal', sans serif;
 }
 
-h1, h2 {
-  font-family: 'Big Shoulders Text', cursive;
+h1, h2, h3 {
   font-weight: 200;
   color: #EDE9EC;
 }
 
 h1 {
   font-size: 32px;
+  letter-spacing: -0.5px;
 }
 
-h2 {
+h3 {
   font-size: 20px;
+  letter-spacing: 0.5;
 }
 
 p {
   color: #EDE9EC;
+  font-weight: 200;
 }
 
 .menu-container {
@@ -143,9 +146,10 @@ p {
 
 .dropdown-menu {
   display: none;
-  font-family: 'Big Shoulders Text', cursive;
+  font-family: 'Tajawal', sans-serif;
   font-weight: 200;
-  font-size: 30px;
+  letter-spacing: 0.5px;
+  font-size: 25px;
   position: fixed;
   top: 0px;
   left: 0;
@@ -195,22 +199,16 @@ article {
 .title-container {
   position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 100vh;
   background-color: #272727;
-  box-shadow: 0 10px #1f1f1f;
   border-bottom: 3px solid #1a1a1a;
 }
 
 .main-title {
-  width: 80%;
-}
-
-.main-title h1, .main-title h2 {
-  margin-left: 30px;
-  letter-spacing: 2px;
+  width: 90%;
 }
 
 .links {
@@ -231,7 +229,7 @@ article {
 .brick-wall {
   background-image: url("../images/wall.svg");
   background-size: 150px;
-  background-position: 7px 15px;
+  background-position: 30px 22px;
 }
 
 .image-container {
@@ -251,12 +249,57 @@ article {
   width: 100%;
 }
 
+#about-me {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid #1a1a1a;
+  box-shadow: 0 -10px rgba(26, 26, 26, 0.5);
+}
+
+.introduction {
+  width: 90%;
+}
+
+.paragraphs p em {
+  color: #ED9F31;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.highlighted-word {
+  color: #BE4B88;
+  font-weight: 400;
+}
+
+.free-time {
+  color: #109193;
+  font-weight: 400;
+}
+
+/* =======================================================
+MOBILE STYLES
+======================================================= */
+@media only screen and (max-width: 640px) {
+  .title-container {
+    box-shadow: 0 10px rgba(26, 26, 26, 0.5);
+  }
+}
+
 /* =======================================================
 TABLET STYLES
 ======================================================= */
 @media only screen and (min-width: 641px) and (max-width: 1007px) {
+  .title-container {
+    box-shadow: 0 10px rgba(26, 26, 26, 0.5);
+  }
   .illustration {
     width: 48%;
+  }
+  .introduction {
+    width: 70%;
   }
 }
 
@@ -284,24 +327,54 @@ DESKTOP STYLES
   .title-container {
     width: 60%;
     border-bottom: none;
-    border-right: 3px solid #1a1a1a;
-    box-shadow: 7px 0 #1f1f1f;
+  }
+  .main-title {
+    width: 100%;
+    padding-left: 70px;
+  }
+  .links {
+    left: 70px;
+  }
+  .links a:hover {
+    transform: scale(110%);
+    transition: transform 0.2s ease;
   }
   .image-container {
     width: 40%;
+    border-bottom: 3px solid #1f1f1f;
+    border-left: 3px solid #1f1f1f;
+    box-shadow: 7px -7px inset rgba(26, 26, 26, 0.3);
   }
   .illustration {
     width: 70%;
   }
+  .illustration img:hover {
+    transform: scale(110%);
+    transition: transform 0.2s ease;
+  }
+  #about-me {
+    border-top: none;
+    box-shadow: none;
+  }
+  .introduction {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 70px;
+  }
+  .paragraphs {
+    width: 75%;
+    max-width: 800px;
+  }
 }
 
 /* =======================================================
-FOR SCREEN HEIGHT < 450px
+FOR SCREEN HEIGHT < 500px
 ======================================================= */
 @media only screen and (max-height: 500px) {
   .dropdown-menu {
-    font-weight: 100;
-    font-size: 25px;
+    font-size: 20px;
   }
   .links {
     max-width: 70px;

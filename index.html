@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <title>My Creative Portfolio</title>
     <link rel="icon" href="assets/images/logo.svg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
@@ -42,7 +48,7 @@
             <div class="title-container">
                 <div class="main-title">
                     <h1>I'm Domenico,</h1>
-                    <h2>I build interfaces for the web</h2>
+                    <h3>I build interfaces for the web</h3>
                 </div>
                 <div class="links">
                     <a href="https://github.com/domenicodeblasi"><img src="assets/images/links-skills/github-logo.svg"/></a>
@@ -58,11 +64,20 @@
         </section>
 
         <section id="about-me">
-            <!-- About Me section -->
+            <div class="introduction">
+                <h2>ABOUT ME</h2>
+                <div class="paragraphs">
+                    <p>I'm <em>Domenico De Blasi</em>, a Junior Front End Developer based in <em>Parma</em> (Italy), who has recently started a journey in this world. I'm an highly motivated learner, with the will to <span class="highlighted-word">increase</span> my skills. I'm careful to details and I chase perfection in everything I do, with great attention to <span class="highlighted-word">optimizing</span> my time well.</p>
+                    <br/>
+                    <p>As a <em>web developer</em>, my goal is to build <span class="highlighted-word">challenging</span> web interfaces, combining what I've learned and what I'm learning, always trying to improve the final product.</p>
+                    <br/>
+                    <p>When I'm not in front of a computer screen, probably I'm spending time with <span class="free-time">friends</span>, playing <span class="free-time">video games</span>, <span class="free-time">travelling</span> or listening to some good <span class="free-time">music</span>.</p>
+                </div>
+            </div>
         </section>
 
         <section id="projects">
-            <!-- Projects section -->
+            
         </section>
 
         <section id="skills">
@@ -75,6 +90,12 @@
             <!-- Contact Me section -->
         </section>
     </footer>
+
+    <script>
+        document.querySelector(".menu-features").onclick = function() {
+            document.getElementById("hamburger").checked = false;
+        }
+    </script>
 
 </body>
 
