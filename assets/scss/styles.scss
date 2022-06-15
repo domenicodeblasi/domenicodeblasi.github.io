@@ -115,7 +115,7 @@ article {
     width: 100%;
     height: 100vh;
     background-color: $dark-color;
-    border-bottom: 3px solid darken($dark-color, 5%);
+    border-bottom: 3px solid darken($dark-color, 4%);
 }
 
 .main-title {
@@ -140,7 +140,7 @@ article {
 .brick-wall {
     background-image: url("../images/wall.svg");
     background-size: 150px;
-    background-position: 30px 22px;
+    background-position: 30px 14px;
 }
 
 .image-container {
@@ -166,7 +166,7 @@ article {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    border-top: 3px solid darken($dark-color, 5%);
+    border-top: 3px solid darken($dark-color, 4%);
     box-shadow: 0 -10px rgba(darken($dark-color, 5%), 0.5);
 }
 
@@ -190,6 +190,72 @@ article {
     font-weight: 400;
 }
 
+#projects {
+    display: flex;
+    width: 100%;
+    height: 250vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5%;
+    width: 100%;
+    box-shadow: 0 10px rgba(darken($dark-color, 5%), 0.5);
+
+    h2 {
+        width: 90%;
+    }
+}
+
+.poster-container {
+    display: flex;
+    width: 100%;
+    height: 95%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 3px solid darken($dark-color, 4%);
+    border-bottom: 3px solid darken($dark-color, 4%);
+}
+
+.poster {
+    height: 100%;
+    width: 100%;
+    min-width: 200px;
+    max-width: 220px;
+    display: flex;
+    align-items: center;
+}
+
+.project-1 {
+
+    img {
+        width: 100%;
+    }
+}
+.project-2 {
+
+    img {
+        width: 100%;
+    }
+}
+.project-3 {
+
+    img {
+        width: 100%;
+    }
+}
+.project-4 {
+
+    img {
+        width: 100%;
+    }
+}
+
 /* =======================================================
 MOBILE STYLES
 ======================================================= */
@@ -199,7 +265,6 @@ MOBILE STYLES
     .title-container {
         box-shadow: 0 10px rgba(darken($dark-color, 5%), 0.5);
     }    
-
 }
 
 /* =======================================================
@@ -218,6 +283,25 @@ TABLET STYLES
 
     .introduction {
         width: 70%;
+    }
+
+    #projects {
+        height: 150vh;
+    }
+
+    .projects-title {
+        width: 70%;
+        padding-bottom: 10px;
+    }
+
+    .poster-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .poster {
+        height: 50%;
+        max-width: 300px;
     }
 }
 
@@ -273,9 +357,9 @@ DESKTOP STYLES
     
     .image-container {
         width: 40%;
-        border-bottom: 3px solid darken($dark-color, 3%);
-        border-left: 3px solid darken($dark-color, 3%);
-        box-shadow: 7px -7px inset rgba(darken($dark-color, 5%), 0.3);
+        border-bottom: 3px solid darken($dark-color, 4%);
+        border-left: 3px solid darken($dark-color, 4%);
+        box-shadow: inset 7px -7px rgba(darken($dark-color, 5%), 0.3);
     }
 
     .illustration {
@@ -304,6 +388,32 @@ DESKTOP STYLES
         width: 75%;
         max-width: 800px;
     }
+
+    .projects-title {
+        width: 100%;
+        padding: 0 70px 20px 70px;
+
+        h2 {
+            width: 100%;
+        }
+    }
+
+    #projects {
+        height: 100vh;
+    }
+
+    .poster-container {
+        padding: 0 70px;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .poster {
+        height: 100%;
+        width: 25%;
+        max-width: 300px;
+    }
 }
 
 /* =======================================================
@@ -321,5 +431,30 @@ FOR SCREEN HEIGHT < 500px
 
     .illustration {
         width: 25%;
+    }
+
+    #about-me {
+        height: 150vh;
+    }
+
+    #projects {
+        height: 100vh;
+    }
+
+    .projects-title {
+        padding-bottom: 15px;
+    }
+
+    .poster-container {
+        
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .poster {
+        height: 100%;
+        min-width: 70px;
+        max-width: 120px;
     }
 }
