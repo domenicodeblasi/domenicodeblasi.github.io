@@ -361,12 +361,12 @@ PROJECTS SECTION
   cursor: pointer;
 }
 
-.project:hover {
+.project:hover, .project:active {
   transform: scale(1.05);
   transition: transform 0.2s ease;
 }
 
-.project:hover > .retractable-panel {
+.project:hover > .retractable-panel, .project:active > .retractable-panel {
   height: 65%;
   display: flex;
   animation: project-panel-hover 0.1s ease;
@@ -432,8 +432,16 @@ SKILLS SECTION
 .skills-container {
   margin-top: 60px;
   display: grid;
-  grid-template-columns: repeat(2, 60px);
-  gap: 50px;
+  grid-template-columns: repeat(2, 80px);
+  gap: 70px;
+}
+
+.cell {
+  background-color: green;
+}
+
+.cell h3 {
+  text-align: center;
 }
 
 /* =======================================================
@@ -536,6 +544,16 @@ DESKTOP STYLES
   }
   .projects-container {
     grid-template-columns: repeat(4, 1fr);
+    padding: 50px 5%;
+  }
+  .project:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+  }
+  .project:hover > .retractable-panel {
+    height: 65%;
+    display: flex;
+    animation: project-panel-hover 0.1s ease;
   }
 }
 
