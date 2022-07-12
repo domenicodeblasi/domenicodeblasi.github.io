@@ -361,12 +361,12 @@ PROJECTS SECTION
   cursor: pointer;
 }
 
-.project:hover, .project:active {
+.project:hover {
   transform: scale(1.05);
   transition: transform 0.2s ease;
 }
 
-.project:hover > .retractable-panel, .project:active > .retractable-panel {
+.project:hover > .retractable-panel {
   height: 65%;
   display: flex;
   animation: project-panel-hover 0.1s ease;
@@ -374,6 +374,7 @@ PROJECTS SECTION
 
 .project-1,
 .project-3 {
+  background-image: url("../images/projects/poster1-small.png");
   background-image: image-set(url("../images/projects/poster1-small.png") 1x, url("../images/projects/poster1-big.png") 2x);
   background-size: 115%;
   background-position: center;
@@ -381,6 +382,7 @@ PROJECTS SECTION
 
 .project-2,
 .project-4 {
+  background-image: url("../images/projects/poster2-small.png");
   background-image: image-set(url("../images/projects/poster2-small.png") 1x, url("../images/projects/poster2-big.png") 2x);
   background-size: 115%;
   background-position: center;
@@ -545,15 +547,6 @@ DESKTOP STYLES
   .projects-container {
     grid-template-columns: repeat(4, 1fr);
     padding: 50px 5%;
-  }
-  .project:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s ease;
-  }
-  .project:hover > .retractable-panel {
-    height: 65%;
-    display: flex;
-    animation: project-panel-hover 0.1s ease;
   }
 }
 
