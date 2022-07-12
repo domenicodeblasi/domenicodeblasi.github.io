@@ -18,6 +18,25 @@
   }
 }
 
+@keyframes project-panel-hover {
+  0% {
+    display: flex;
+    height: 0%;
+  }
+  25% {
+    display: flex;
+    height: 20%;
+  }
+  50% {
+    display: flex;
+    height: 40%;
+  }
+  100% {
+    display: flex;
+    height: 65%;
+  }
+}
+
 /* 35px*35px click area */
 #hamburger {
   width: 100%;
@@ -90,9 +109,12 @@
   width: 39px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #272727;
-  height: 4000px;
   font-family: 'Tajawal', sans serif;
 }
 
@@ -116,6 +138,9 @@ p {
   font-weight: 200;
 }
 
+/* =======================================================
+MENU
+======================================================= */
 .menu-container {
   position: fixed;
   top: 0;
@@ -191,6 +216,9 @@ article {
   height: 100%;
 }
 
+/* =======================================================
+HERO SECTION
+======================================================= */
 #hero {
   width: 100%;
   height: 200vh;
@@ -204,7 +232,7 @@ article {
   width: 100%;
   height: 100vh;
   background-color: #272727;
-  border-bottom: 3px solid #1d1d1d;
+  border-bottom: 2px solid #1d1d1d;
 }
 
 .main-title {
@@ -227,7 +255,7 @@ article {
 }
 
 .brick-wall {
-  background-image: url("../images/wall.svg");
+  background-image: url("../images/svg/wall.svg");
   background-size: 150px;
   background-position: 30px 14px;
 }
@@ -249,18 +277,22 @@ article {
   width: 100%;
 }
 
+/* =======================================================
+ABOUT ME SECTION
+======================================================= */
 #about-me {
   display: flex;
   width: 100%;
   height: 100vh;
   justify-content: center;
   align-items: center;
-  border-top: 3px solid #1d1d1d;
-  box-shadow: 0 -10px rgba(26, 26, 26, 0.5);
+  border-top: 2px solid #1d1d1d;
+  box-shadow: 0 -10px rgba(26, 26, 26, 0.3);
 }
 
 .introduction {
   width: 90%;
+  margin-top: 80px;
 }
 
 .paragraphs p em {
@@ -279,61 +311,129 @@ article {
   font-weight: 400;
 }
 
+/* =======================================================
+PROJECTS SECTION
+======================================================= */
 #projects {
   display: flex;
   width: 100%;
-  height: 250vh;
   flex-direction: column;
   align-items: center;
 }
 
 .projects-title {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
-  height: 5%;
+  height: 120px;
   width: 100%;
-  box-shadow: 0 10px rgba(26, 26, 26, 0.5);
+  box-shadow: 0 10px rgba(26, 26, 26, 0.3);
 }
 
 .projects-title h2 {
+  position: absolute;
+  bottom: 10px;
   width: 90%;
 }
 
-.poster-container {
+.projects-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: auto;
+  border-top: 2px solid #1d1d1d;
+  border-bottom: 2px solid #1d1d1d;
+  gap: 50px;
+  padding: 50px 0;
+}
+
+.project {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 40px;
+  margin: 0 auto;
+  width: 200px;
+  height: 300px;
+  border: 2px solid #1d1d1d;
+  border-radius: 10px;
+  box-shadow: 4px 4px rgba(26, 26, 26, 0.3);
+  cursor: pointer;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+.project:hover > .retractable-panel {
+  height: 65%;
+  display: flex;
+  animation: project-panel-hover 0.1s ease;
+}
+
+.project-1,
+.project-3 {
+  background-image: image-set(url("../images/projects/poster1-small.png") 1x, url("../images/projects/poster1-big.png") 2x);
+  background-size: 115%;
+  background-position: center;
+}
+
+.project-2,
+.project-4 {
+  background-image: image-set(url("../images/projects/poster2-small.png") 1x, url("../images/projects/poster2-big.png") 2x);
+  background-size: 115%;
+  background-position: center;
+}
+
+.retractable-panel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 0%;
+  width: 100%;
+  background-color: rgba(237, 159, 49, 0.9);
+  border-radius: 7px;
+  cursor: pointer;
+  display: none;
+}
+
+.retractable-panel img {
+  width: 40px;
+}
+
+/* =======================================================
+SKILLS SECTION
+======================================================= */
+#skills {
   display: flex;
   width: 100%;
-  height: 95%;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  border-top: 3px solid #1d1d1d;
-  border-bottom: 3px solid #1d1d1d;
 }
 
-.poster {
-  height: 100%;
-  width: 100%;
-  min-width: 200px;
-  max-width: 220px;
+.skills-title {
   display: flex;
+  position: relative;
+  justify-content: center;
   align-items: center;
+  height: 120px;
+  width: 100%;
+  box-shadow: 0 -10px rgba(26, 26, 26, 0.3);
 }
 
-.project-1 img {
-  width: 100%;
+.skills-title h2 {
+  position: absolute;
+  bottom: 10px;
+  width: 90%;
 }
 
-.project-2 img {
-  width: 100%;
-}
-
-.project-3 img {
-  width: 100%;
-}
-
-.project-4 img {
-  width: 100%;
+.skills-container {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 60px);
+  gap: 50px;
 }
 
 /* =======================================================
@@ -341,7 +441,7 @@ MOBILE STYLES
 ======================================================= */
 @media only screen and (max-width: 640px) {
   .title-container {
-    box-shadow: 0 10px rgba(26, 26, 26, 0.5);
+    box-shadow: 0 10px rgba(26, 26, 26, 0.3);
   }
 }
 
@@ -358,20 +458,8 @@ TABLET STYLES
   .introduction {
     width: 70%;
   }
-  #projects {
-    height: 150vh;
-  }
-  .projects-title {
-    width: 70%;
-    padding-bottom: 10px;
-  }
-  .poster-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .poster {
-    height: 50%;
-    max-width: 300px;
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -390,6 +478,13 @@ DESKTOP STYLES
   .menu-features li:hover a {
     margin-left: 5px;
     transition: margin-left 0.2s ease;
+  }
+  .main-logo {
+    cursor: pointer;
+  }
+  .main-logo:hover {
+    transform: scale(1.1);
+    transition: transform 0.1s ease;
   }
   #hero {
     width: 100%;
@@ -413,8 +508,8 @@ DESKTOP STYLES
   }
   .image-container {
     width: 40%;
-    border-bottom: 3px solid #1d1d1d;
-    border-left: 3px solid #1d1d1d;
+    border-bottom: 2px solid #1d1d1d;
+    border-left: 2px solid #1d1d1d;
     box-shadow: inset 7px -7px rgba(26, 26, 26, 0.3);
   }
   .illustration {
@@ -439,26 +534,8 @@ DESKTOP STYLES
     width: 75%;
     max-width: 800px;
   }
-  .projects-title {
-    width: 100%;
-    padding: 0 70px 20px 70px;
-  }
-  .projects-title h2 {
-    width: 100%;
-  }
-  #projects {
-    height: 100vh;
-  }
-  .poster-container {
-    padding: 0 70px;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .poster {
-    height: 100%;
-    width: 25%;
-    max-width: 300px;
+  .projects-container {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -477,21 +554,5 @@ FOR SCREEN HEIGHT < 500px
   }
   #about-me {
     height: 150vh;
-  }
-  #projects {
-    height: 100vh;
-  }
-  .projects-title {
-    padding-bottom: 15px;
-  }
-  .poster-container {
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .poster {
-    height: 100%;
-    min-width: 70px;
-    max-width: 120px;
   }
 }

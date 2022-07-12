@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <title>My Creative Portfolio</title>
-    <link rel="icon" href="assets/images/logo.svg" />
+    <link rel="icon" href="assets/images/svg/logo.svg" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,9 @@
     <header class="menu-container">
         <div class="menu">
 
-            <img src="assets/images/logo.svg" alt="logo" width="50px" />
+            <a href="#" class="main-logo">
+                <img src="assets/images/svg/logo.svg" alt="logo" width="50px">
+            </a>
 
             <div class="hamburger-container">
                 <input id="hamburger" type="checkbox">
@@ -27,10 +29,10 @@
                 <div class="dropdown-menu">
                     <nav>
                         <ul class="menu-features">
-                            <li><a href="#about-me">ABOUT ME</a></li>
-                            <li><a href="#projects">PROJECTS</a></li>
-                            <li><a href="#skills">SKILLS</a></li>
-                            <li><a href="#contact-me">CONTACT ME</a></li>
+                            <li><a href="#about-me" class="link">ABOUT ME</a></li>
+                            <li><a href="#projects" class="link">PROJECTS</a></li>
+                            <li><a href="#skills" class="link">SKILLS</a></li>
+                            <li><a href="#contact-me" class="link">CONTACT ME</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -47,8 +49,8 @@
                     <h3>I build interfaces for the web</h3>
                 </div>
                 <div class="links">
-                    <a href="https://github.com/domenicodeblasi"><img src="assets/images/links-skills/github-logo.svg"/></a>
-                    <a href="https://www.linkedin.com/in/domenico-de-blasi/"><img src="assets/images/links-skills/linkedin-logo.svg"/></a>
+                    <a href="https://github.com/domenicodeblasi"><img src="assets/images/svg/github-logo.svg"/></a>
+                    <a href="https://www.linkedin.com/in/domenico-de-blasi/"><img src="assets/images/svg/linkedin-logo.svg"/></a>
                 </div>
             </div>
 
@@ -76,24 +78,44 @@
             <div class="projects-title">
                 <h2>PROJECTS</h2>
             </div>
-            <div class="poster-container brick-wall">
-                <div class="poster project-1">
-                    <img src="assets/images/poster-1.png" alt="first project">
+            <div class="projects-container brick-wall">
+                <div class="project project-1">
+                    <div class="retractable-panel">
+                        <a><img src="assets/images/svg/github-logo.svg" alt="GitHub Logo"></a>
+                        <a><img src="assets/images/svg/eye.svg"></a>
+                    </div>
                 </div>
-                <div class="poster project-2">
-                    <img src="assets/images/poster-2.png" alt="second project">
+                <div class="project project-2">
+                    <div class="retractable-panel">
+                        <a><img src="assets/images/svg/github-logo.svg" alt="GitHub Logo"></a>
+                        <a><img src="assets/images/svg/eye.svg"></a>
+                    </div>
                 </div>
-                <div class="poster project-3">
-                    <img src="assets/images/poster-3.png" alt="third project">
+                <div class="project project-3">
+                    <div class="retractable-panel">
+                        <a><img src="assets/images/svg/github-logo.svg" alt="GitHub Logo"></a>
+                        <a><img src="assets/images/svg/eye.svg"></a>
+                    </div>
                 </div>
-                <div class="poster project-4">
-                    <img src="assets/images/poster-4.png" alt="fourth project">
+                <div class="project project-4">
+                    <div class="retractable-panel">
+                        <a><img src="assets/images/svg/github-logo.svg" alt="GitHub Logo"></a>
+                        <a><img src="assets/images/svg/eye.svg"></a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="skills">
-            <!-- Skills section -->
+            <div class="skills-title">
+                <h2>SKILLS</h2>
+            </div>
+            <div class="skills-container">
+                <div class="cell"><img src="assets/images/svg/html-logo.svg" alt="HTML logo"></div>
+                <div class="cell"><img src="assets/images/svg/css-logo.svg" alt="CSS logo"></div>
+                <div class="cell"><img src="assets/images/svg/sass-logo.svg" alt="SASS logo"></div>
+                <div class="cell"><img src="assets/images/svg/git-logo.svg" alt="Git logo"></div>
+            </div>
         </section>
     </article>
 
@@ -103,11 +125,7 @@
         </section>
     </footer>
 
-    <script>
-        document.querySelector(".menu-features").onclick = function() {
-            document.getElementById("hamburger").checked = false;
-        }
-    </script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 
