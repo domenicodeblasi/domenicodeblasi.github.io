@@ -18,7 +18,7 @@
   }
 }
 
-@keyframes project-panel-hover {
+@keyframes show-project-panel {
   0% {
     display: flex;
     height: 0%;
@@ -361,17 +361,6 @@ PROJECTS SECTION
   cursor: pointer;
 }
 
-.project:hover {
-  transform: scale(1.05);
-  transition: transform 0.2s ease;
-}
-
-.project:hover > .retractable-panel {
-  height: 65%;
-  display: flex;
-  animation: project-panel-hover 0.1s ease;
-}
-
 .project-1,
 .project-3 {
   background-image: url("../images/projects/poster1-small.png");
@@ -547,6 +536,15 @@ DESKTOP STYLES
   .projects-container {
     grid-template-columns: repeat(4, 1fr);
     padding: 50px 5%;
+  }
+  .project:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+  }
+  .project:hover > .retractable-panel {
+    height: 65%;
+    display: flex;
+    animation: show-project-panel 0.1s ease;
   }
 }
 

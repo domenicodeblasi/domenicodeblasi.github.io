@@ -256,18 +256,6 @@ PROJECTS SECTION
     border-radius: 10px;
     box-shadow: (4px 4px rgba(darken($dark-color, 5%), 0.3));
     cursor: pointer;
-
-    &:hover {
-        transform: scale(1.05);
-        transition: transform 0.2s ease;
-    
-        // when we hover the project panel, it shows the retractable panel
-        & > .retractable-panel {
-            height: 65%;
-            display: flex;
-            animation: project-panel-hover 0.1s ease;
-        }
-    }
 }
 
 // responsive background-image for panels
@@ -494,6 +482,18 @@ DESKTOP STYLES
     .projects-container {
         grid-template-columns: repeat(4, 1fr);
         padding: 50px 5%;
+    }
+
+    .project:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease;
+    
+        // when we hover the project panel, it shows the retractable panel
+        & > .retractable-panel {
+            height: 65%;
+            display: flex;
+            animation: show-project-panel 0.1s ease;
+        }
     }
 }
 
