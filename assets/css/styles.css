@@ -115,7 +115,7 @@ html {
 
 body {
   background-color: #272727;
-  font-family: 'Tajawal', sans serif;
+  font-family: 'Tajawal', sans-serif;
 }
 
 h1, h2, h3 {
@@ -257,7 +257,7 @@ HERO SECTION
 .brick-wall {
   background-image: url("../images/svg/wall.svg");
   background-size: 150px;
-  background-position: 30px 14px;
+  background-position: 30px 15px;
 }
 
 .image-container {
@@ -440,6 +440,51 @@ SKILLS SECTION
 }
 
 /* =======================================================
+CONTACT ME SECTION
+======================================================= */
+#contact-me {
+  height: 100vh;
+  width: 100%;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 400px;
+}
+
+.form {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form input {
+  width: 100%;
+  height: 30px;
+  font-family: "Tajawal", sans-serif;
+  background-color: #EDE9EC;
+  border: 2px solid #bfb1bc;
+  border-radius: 5px;
+  text-indent: 10px;
+}
+
+.form button {
+  font-family: "Tajawal", sans-serif;
+  width: 70%;
+  height: 30px;
+  background-color: #109193;
+  color: #EDE9EC;
+  border: 2px solid #15bec1;
+  border-radius: 5px;
+}
+
+/* =======================================================
 MOBILE STYLES
 ======================================================= */
 @media only screen and (max-width: 640px) {
@@ -464,15 +509,22 @@ TABLET STYLES
   .projects-container {
     grid-template-columns: repeat(2, 1fr);
   }
-  .projects-title h2 {
-    width: 70%;
-  }
+  .projects-title h2,
   .skills-title h2,
   .contact-me-title h2 {
     width: 70%;
   }
   .skills-container {
     grid-template-columns: repeat(4, 70px);
+  }
+  .form-container {
+    width: 60%;
+  }
+  .form input {
+    width: 80%;
+  }
+  .form button {
+    width: 50%;
   }
 }
 
@@ -547,10 +599,6 @@ DESKTOP STYLES
     width: 75%;
     max-width: 800px;
   }
-  .projects-title h2 {
-    width: 100%;
-    padding: 0 70px;
-  }
   .projects-container {
     grid-template-columns: repeat(4, 1fr);
     padding: 50px 5%;
@@ -564,6 +612,7 @@ DESKTOP STYLES
     display: flex;
     animation: show-project-panel 0.1s ease;
   }
+  .projects-title h2,
   .skills-title h2,
   .contact-me-title h2 {
     width: 100%;
@@ -571,6 +620,15 @@ DESKTOP STYLES
   }
   .skills-container {
     grid-template-columns: repeat(6, 70px);
+  }
+  .form-container {
+    width: 70%;
+  }
+  .form input {
+    width: 60%;
+  }
+  .form button {
+    width: 30%;
   }
 }
 
